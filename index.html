@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Лампы и аксессуары - Каталог - Главная</title>
+    <link href="/css/App.css" rel="stylesheet">
+    <link href="/css/theme.css" rel="stylesheet">
+    <link id="favicon" rel="icon" href="/img/favicon_era.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/img/favicon_era.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="64x64" href="/img/favicon-64x64.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link id="dynamic-favicon" rel="icon" type="image/png" href="/img/favicon_era_64_light.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta id="theme-color" name="theme-color" content="#ffffff">
+    <meta name="yandex-verification" content="c5f19f5e6da7278f">
+    <meta name="description" content="Официальный сайт бренда ЭРА...">
+    <meta name="keywords" content="ЭРА, лампы, аксессуары, электрика">
+    <meta name="author" content="ЭРА">
+    <meta name="language" content="ru">
+    <meta property="og:title" content="Лампы и аксессуары - Каталог - Главная">
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="Официальный сайт бренда ЭРА...">
+    <meta property="og:image" content="http://www.eraworld.ru/img/og.jpg">
+    <meta property="og:url" content="http://www.eraworld.ru/catalog/category/338">
+    <meta property="og:locale" content="ru_RU">
+    <meta name="csrf-token" content="{{2f643bee1f4657() }}">
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/hyphenator@5.2.0/Hyphenator.js"></script>
+</head>
+
+<body>
+
+    <div id="root"></div>
+    <div id="cursor-glow"></div>
+
+    <!-- Шапка сайта -->
+    <header class="header hidden-print">
+        <div class="container">
+            <div class="city-area-container">
+                <h1 class="city-area">Ваш город: </h1>
+                <ul class="header-info">
+                    <li>Сайт для проектировщиков</li>
+                    <li>Личный кабинет</li>
+                </ul>
+            </div>
+            <div class="logo-theme-wrapper">
+
+                <a href="https://www.eraworld.ru/" class="logo">
+                    <img src="/img/logo_era.svg" alt="logo" />
+                </a>
+
+                <div class="search-container">
+                    <form action="/search" class="search-form">
+                        <input type="text" id="search-input" placeholder="Поиск по сайту...">
+                    </form>
+                </div>
+
+                <button id="themeToggleBtn" class="theme_change" aria-label="Сменить тему">
+                    <span class="header-info_change">Сменить тему</span>
+                    <img id="themeIcon" class="theme-icon change-icon" src="/img/light_lamp.svg"
+                        data-light="/img/light_lamp.svg" data-dark="/img/dark_lamp.svg" width="86" alt="Иконка темы" />
+                </button>
+
+            </div>
+
+
+            <nav class="nav_main nav_main_sub">
+                <ul>
+                    <li><a href="https://www.eraworld.ru/solutions">Отраслевые решения</a></li>
+                    <li><a href="https://www.eraworld.ru/projects">Реализованные проекты</a></li>
+                    <li><a href="https://www.eraworld.ru/services">Сервисы</a></li>
+                    <li><a href="https://www.eraworld.ru/about">Компания</a></li>
+                    <li><a href="/articles/9-chestnaya-poziciya-era.html">Честная позиция</a></li>
+                    <li><a href="https://www.eraworld.ru/news">Новости</a></li>
+                    <li><a href="https://www.eraworld.ru/guide">Справочник</a></li>
+                    <li><a href="https://www.eraworld.ru/about/wheretobuy">Где купить</a></li>
+                    <li><a href="https://www.eraworld.ru/advert">Скачать</a></li>
+                    <li><a href="https://www.eraworld.ru/contacts">Контакты</a></li>
+                </ul>
+            </nav>
+            <hr>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="container">
+
+        <nav class="page-heading">
+
+            <ul class="breadcrumb hidden-print">
+                <li><a href="https://www.eraworld.ru">Главная</a></li>
+                <li><a href="https://www.eraworld.ru/catalog">Каталог</a></li>
+            </ul>
+
+            <h2>Торговое освещение</h2>
+
+        </nav>
+
+        <div class="selectors-row">
+
+            <!-- Переключение режима отображения карточек товара -->
+            <div class="selector mode_selector">
+                <button type="button" class="btn_head" id="toggleViewBtn" aria-label="Переключить режим отображения">
+                    <span class="head_text-button">Карточки</span>
+                    <img src="/img/change-type-cards.svg" alt="Переключение режима">
+                </button>
+            </div>
+
+            <!-- Кнопка открытия модального каталога -->
+            <div class="selector type_selector">
+                <button id="openCatalogModal" class="catalog-button" type="button" aria-label="Открыть каталог"
+                    role="button">
+                    <img src="/img/catalog-button-icon.svg" alt="Каталог иконка">
+                    <span class="text-button">Каталог</span>
+                </button>
+            </div>
+
+            <!-- Кнопка открытия фильтров -->
+            <div class="selector filter_selector">
+                <button id="toggleFilters" class="btn-toggle-filters" type="button"
+                    aria-label="Открыть фильтры">
+                    <span class="filter_text-button">Фильтры</span>
+                    <img src="/img/filter-icon.svg" alt="Фильтр иконка">
+                </button>
+            </div>
+
+        </div>
+
+        <div class="main-wrapper">
+            <section class="grid-container main-content">
+
+                <!-- Контейнер,  Grid -->
+                <section class="mode_cards" id="ItemContainer">
+                    <link rel="canonical" href="https://www.eraworld.ru/catalog/category/338">
+                    <div id="no-results-message" class="no-results" style="display: none;">
+                        <div class="no-results-inner">
+                            <span>На данный момент товары отсутствуют</span>
+                            <button id="clear-filters" title="Сбросить фильтры">✖</button>
+                        </div>
+                    </div>
+
+                    <div class="grid-row">
+                        <!-- Карточка 1: Большая карточка (рядовая версия) -->
+
+
+                        <div class=" card_box card-square card_box_row list-view" data-ra="90" data-color-temp="4000"
+                            data-body-color="Белый" data-diffuser="Матовый" data-model="SPO-7" data-size="1200x180x19"
+                            data-power="36" data-degree-of-protection="IP40">
+
+                            <div class="media-left">
+                                <a itemscope itemtype="http://schema.org/ImageObject">
+                                    <img src="/images/cards_images/row1.png" loading="lazy" width="240" height="240"
+                                        alt="Аварийный светильник светодиодный ЭРА SPO-6-36-4K-M-A2 с выводом к БАП Б0062020 36Вт 4000K 3200Лм 1200x180x19 матовый"
+                                        itemprop="contentUrl">
+                                    <meta itemprop="name"
+                                        content="Аварийный светильник светодиодный ЭРА SPO-6-36-4K-M-A2 с выводом к БАП Б0062020 36Вт 4000K 3200Лм 1200x180x19 матовый">
+                                    <meta itemprop="width" content="240">
+                                    <meta itemprop="height" content="240">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <div class="card-heading">
+                                    <small class="info-line"> Б0062013
+                                        <button class="ad-button_promo" id="ad-button" type="submit">
+                                            <img src="/img/fire.svg" alt="icon">
+                                            <span class="ad_text-button">участвует в акции</span>
+                                        </button>
+                                    </small>
+                                    <a target="_blank" lang="ru" class="hyphenate card_description"
+                                        href="https://www.eraworld.ru/catalog/2999573">
+                                        Аварийный светильник светодиодный ЭРА SPO-7 с выводом
+                                        к БАП Б0062020 36Вт 4000K 3200Лм
+                                        1200x180x19 матовый бехлый
+                                    </a>
+                                    <ul>
+                                        <li>Мощность, Вт: 36</li>
+                                        <li>Степень защиты: IP40</li>
+                                        <li>Размеры: 1200x180x19</li>
+                                        <li>Индекс цветопередачи, Ra: 90 </li>
+                                        <li>Цветовая температура, K: 4000</li>
+                                    </ul>
+
+                                </div>
+
+                                <div class="sub_info"></div>
+                            </div>
+
+                        </div>
+
+                        <!-- Карточка 1: Маленькая карточка -->
+                        <div class="card card_box card_box_small card-square card_item cards-view" data-ra="90"
+                            data-color-temp="4000" data-body-color="Белый" data-diffuser="Матовый" data-model="SPO-7"
+                            data-size="1200x180x19" data-power="36" data-degree-of-protection="IP40">
+
+                            <div class="card-body">
+                                <a target="_blank" itemscope itemtype="http://schema.org/ImageObject">
+                                    <img src="/images/cards_images/col1.png" loading="lazy" width="240" height="240"
+                                        alt="Аварийный светильник светодиодный ЭРА SPO-7 с выводом
+                                    к БАП Б0062020 36Вт 4000K 3200Лм 
+                                    1200x180x19 матовый белый" itemprop="contentUrl">
+                                    <meta itemprop="name" content="Аварийный светильник светодиодный ЭРА SPO-7 с выводом
+                                    к БАП Б0062020 36Вт 4000K 3200Лм 
+                                    1200x180x19 матовый белый">
+                                    <meta itemprop="width" content="240">
+                                    <meta itemprop="height" content="240">
+                                </a>
+
+                                <div class="card-heading">
+                                    <small class="info-line"> Б0062013
+                                        <button class="ad-small-button_promo" id="ad-button" type="submit">
+                                            <img src="/img/fire.svg" alt="icon">
+                                            <span class="ad_text-button">участвует в акции</span>
+                                        </button>
+                                    </small>
+                                    <a target="_blank" lang="ru" class="hyphenate small-card_description"
+                                        href="https://www.eraworld.ru/catalog/2999573">
+                                        Аварийный светильник светодиодный ЭРА SPO-7 с выводом
+                                        к БАП Б0062020 36Вт 4000K 3200Лм
+                                        1200x180x19 матовый белый
+                                    </a>
+                                </div>
+                                <div class="right-info">
+                                    <div class="top_row">
+                                        <div class="boxed">
+                                            <a class="param-boxes" target="_blank" role="button">
+                                                <span class="fill"></span>
+                                                <span class="text">IP40</span>
+                                            </a>
+                                        </div>
+
+                                        <div class="boxed">
+                                            <a class="param-boxes" target="_blank" role="button">
+                                                <span class="fill"></span>
+                                                <span class="text">Вт: 36</span>
+                                            </a>
+                                        </div>
+
+                                        <div class="boxed">
+                                            <a class="param-boxes" target="_blank" role="button">
+                                                <span class="fill"></span>
+                                                <span class="text">Ra: 90</span>
+                                            </a>
+                                        </div>
+
+                                        <div class="boxed">
+                                            <a class="param-boxes" target="_blank" role="button">
+                                                <span class="fill"></span>
+                                                <span class="text">K: 4000</span>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Карточка 2: Большая карточка (рядовая версия) -->
+                        <div class="card_box card-square card_box_row list-view" data-ra="80" data-color-temp="6500"
+                            data-body-color="Серебро" data-diffuser="Призма" data-model="SPO-6" data-size="588x588x8"
+                            data-power="48" data-degree-of-protection="IP20">
+
+                            <div class="media-left">
+                                <a target="_blank" itemscope itemtype="http://schema.org/ImageObject">
+                                    <img src="/images/cards_images/row2.png" loading="lazy" width="240" height="240"
+                                        alt="Аварийный светильник светодиодный ЭРА SPO-6-36-4K-M-A2 с выводом к БАП Б0062020 36Вт 4000К 3200Лм 588x588x8 матовый"
+                                        itemprop="contentUrl">
+                                    <meta itemprop="name"
+                                        content="Аварийный светильник светодиодный ЭРА SPO-6-36-4K-M-A2 с выводом к БАП Б0062020 36Вт 4000К 3200Лм 588x588x8 матовый">
+                                    <meta itemprop="width" content="240">
+                                    <meta itemprop="height" content="240">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <div class="card-heading">
+                                    <small class="info-line"> Б0062013
+                                        <button class="ad-button_promo" id="ad-button" type="submit">
+                                            <img src="/img/fire.svg" alt="icon">
+                                            <span class="ad_text-button">участвует в акции</span>
+                                        </button>
+                                    </small>
+                                    <a target="_blank" lang="ru" class="hyphenate card_description"
+                                        href="https://www.eraworld.ru/catalog/2999573">
+                                        Аварийный светильник светодиодный ЭРА SPO-6 с выводом
+                                        к БАП Б0062020 48Вт 6500K 3200Лм 588x588x8 призма серебро
+                                    </a>
+                                    <ul>
+                                        <li>Мощность, Вт: 48</li>
+                                        <li>Степень защиты: IP20</li>
+                                        <li>Размеры: 588x588x8</li>
+                                        <li>Индекс цветопередачи, Ra: 80 </li>
+                                        <li>Цветовая температура, K: 6500</li>
+                                    </ul>
+                                </div>
+
+                                <div class="sub_info"></div>
+                            </div>
+
+                        </div>
+                        <!-- Карточка 2: Маленькая карточка -->
+                        <div class="card card_box card_box_small card-square card_item cards-view" data-ra="80"
+                            data-color-temp="6500" data-body-color="Серебро" data-diffuser="Призма" data-model="SPO-6"
+                            data-size="588x588x8" data-power="48" data-degree-of-protection="IP20">
+
+                            <div class="card-body">
+                                <a target="_blank" itemscope itemtype="http://schema.org/ImageObject">
+                                    <img src="/images/cards_images/col1.png" loading="lazy" width="240" height="240"
+                                        alt=" Аварийный светильник светодиодный ЭРА SPO-6 с выводом
+                                    к БАП Б0062020 48Вт 6500K 3200Лм 588x588x8 призма серебро" itemprop="contentUrl">
+                                    <meta itemprop="name" content=" Аварийный светильник светодиодный ЭРА SPO-6 с выводом
+                                    к БАП Б0062020 48Вт 6500K 3200Лм 588x588x8 призма серебро">
+                                    <meta itemprop="width" content="240">
+                                    <meta itemprop="height" content="240">
+                                </a>
+                                <div class="card-heading">
+                                    <small class="info-line"> Б0062013
+                                        <button class="ad-small-button_promo" id="ad-button" type="submit">
+                                            <img src="/img/fire.svg" alt="icon">
+                                            <span class="ad_text-button">участвует в акции</span>
+                                        </button>
+                                    </small>
+                                    <a target="_blank" lang="ru" class="hyphenate small-card_description"
+                                        href="https://www.eraworld.ru/catalog/2999573">
+                                        Аварийный светильник светодиодный ЭРА SPO-6 с выводом
+                                        к БАП Б0062020 48Вт 6500K 3200Лм 588x588x8 призма серебро
+                                    </a>
+                                </div>
+                                <div class="right-info">
+
+                                    <div class="top_row">
+                                        <div class="boxed">
+                                            <a class="param-boxes" target="_blank" role="button">
+                                                <span class="fill"></span>
+                                                <span class="text">IP20</span>
+                                            </a>
+                                        </div>
+
+                                        <div class="boxed">
+                                            <a class="param-boxes" target="_blank" role="button">
+                                                <span class="fill"></span>
+                                                <span class="text">Вт: 48</span>
+                                            </a>
+                                        </div>
+
+                                        <div class="boxed">
+                                            <a class="param-boxes" target="_blank" role="button">
+                                                <span class="fill"></span>
+                                                <span class="text">Ra: 80</span>
+                                            </a>
+                                        </div>
+
+                                        <div class="boxed">
+                                            <a class="param-boxes" target="_blank" role="button">
+                                                <span class="fill"></span>
+                                                <span class="text">K: 6500</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Карточка 3: Большая карточка (рядовая версия) -->
+                        <div class="card_box card-square card_box_row list-view" data-ra="90" data-color-temp="4000"
+                            data-body-color="Белый" data-diffuser="Матовый" data-model="SPO-5" data-size="595x595x25"
+                            data-power="50" data-degree-of-protection="IP40">
+                            <div class="media-left">
+                                <a target="_blank" itemscope itemtype="http://schema.org/ImageObject">
+                                    <img src="/images/cards_images/row3.png" alt=" Аварийный светильник светодиодный ЭРА SPO-5 с выводом
+                                    к БАП Б0062020 50Вт 4000K 3200Лм 595x595x25 матовый белый" itemprop="contentUrl"
+                                        loading="lazy" width="240" height="240">
+                                    <meta itemprop="name" content=" Аварийный светильник светодиодный ЭРА SPO-5 с выводом
+                                    к БАП Б0062020 50Вт 4000K 3200Лм 595x595x25 матовый белый">
+                                    <meta itemprop="width" content="240">
+                                    <meta itemprop="height" content="240">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <div class="card-heading">
+                                    <small class="info-line"> Б0062013
+                                        <button class="ad-button_promo" id="ad-button" type="submit">
+                                            <img src="/img/fire.svg" alt="icon">
+                                            <span class="ad_text-button">участвует в акции</span>
+                                        </button>
+                                    </small>
+                                    <a target="_blank" lang="ru" class="hyphenate card_description"
+                                        href="https://www.eraworld.ru/catalog/2999573">
+                                        Аварийный светильник светодиодный ЭРА SPO-5 с выводом
+                                        к БАП Б0062020 50Вт 4000K 3200Лм 595x595x25 матовый белый
+                                    </a>
+                                    <ul>
+                                        <li>Мощность, Вт: 50</li>
+                                        <li>Степень защиты: IP40</li>
+                                        <li>Размеры: 595x595x25</li>
+                                        <li>Индекс цветопередачи, Ra: 90 </li>
+                                        <li>Цветовая температура, K: 4000</li>
+                                    </ul>
+                                </div>
+
+                                <div class="sub_info"></div>
+
+                            </div>
+                        </div>
+                        <!-- Карточка 3: Маленькая карточка -->
+                        <div class="card card_box card_box_small card-square card_item cards-view" data-ra="90"
+                            data-color-temp="4000" data-body-color="Белый" data-diffuser="Матовый" data-model="SPO-5"
+                            data-size="595x595x25" data-power="50" data-degree-of-protection="IP40">
+
+                            <div class="card-body">
+                                <a target="_blank" itemscope itemtype="http://schema.org/ImageObject">
+                                    <img src="/images/cards_images/col3.png" alt="   Аварийный светильник светодиодный ЭРА SPO-5 с выводом
+                                    к БАП Б0062020 50Вт 4000K 3200Лм 595x595x25 матовый белый" itemprop="contentUrl"
+                                        loading="lazy" width="240" height="240">
+                                    <meta itemprop="name" content="   Аварийный светильник светодиодный ЭРА SPO-5 с выводом
+                                    к БАП Б0062020 50Вт 4000K 3200Лм 595x595x25 матовый белый">
+                                    <meta itemprop="width" content="240">
+                                    <meta itemprop="height" content="240">
+                                </a>
+
+                                <div class="card-heading">
+                                    <small class="info-line"> Б0062013
+                                        <button class="ad-small-button_promo" id="ad-button" type="submit">
+                                            <img src="/img/fire.svg" alt="icon">
+                                            <span class="ad_text-button">участвует в акции</span>
+                                        </button>
+                                    </small>
+                                    <a target="_blank" lang="ru" class="hyphenate small-card_description"
+                                        href="https://www.eraworld.ru/catalog/2999573">
+                                        Аварийный светильник светодиодный ЭРА SPO-5 с выводом
+                                        к БАП Б0062020 50Вт 4000K 3200Лм 595x595x25 матовый белый
+                                    </a>
+                                </div>
+                                <div class="right-info">
+                                    <div class="top_row">
+                                        <div class="boxed">
+                                            <a class="param-boxes" target="_blank" role="button">
+                                                <span class="fill"></span>
+                                                <span class="text">IP40</span>
+                                            </a>
+                                        </div>
+                                        <div class="boxed">
+                                            <a class="param-boxes" target="_blank" role="button">
+                                                <span class="fill"></span>
+                                                <span class="text">Вт: 50</span>
+                                            </a>
+                                        </div>
+
+                                        <div class="boxed">
+                                            <a class="param-boxes" target="_blank" role="button">
+                                                <span class="fill"></span>
+                                                <span class="text">Ra: 90</span>
+                                            </a>
+                                        </div>
+                                        <div class="boxed">
+                                            <a class="param-boxes" target="_blank" role="button">
+                                                <span class="fill"></span>
+                                                <span class="text">K: 4000</span>
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Карточка 4: Большая карточка (рядовая версия) -->
+                        <div class=" card_box card-square card_box_row list-view" data-ra="80" data-color-temp="6500"
+                            data-body-color="Серебро" data-diffuser="Призма" data-model="SPO-1" data-size="595x595x19"
+                            data-power="72" data-degree-of-protection="IP20">
+                            <div class="media-left">
+                                <a target="_blank" itemscope itemtype="http://schema.org/ImageObject">
+                                    <img src="/images/cards_images/row4.png" loading="lazy" width="242" height="270"
+                                        alt="Аварийный светильник светодиодный ЭРА SPO-1 с выводом
+                                    к БАП Б0062020 72Вт 6500K 3200Лм 595x595x19 призма серебро" itemprop="contentUrl">
+                                    <meta itemprop="name" content="Аварийный светильник светодиодный ЭРА SPO-1 с выводом
+                                    к БАП Б0062020 72Вт 6500K 3200Лм 595x595x19 призма серебро">
+                                    <meta itemprop="width" content="242">
+                                    <meta itemprop="height" content="270">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <div class="card-heading">
+                                    <small class="info-line"> Б0062013
+                                        <button class="ad-button_promo" id="ad-button" type="submit">
+                                            <img src="/img/fire.svg" alt="icon">
+                                            <span class="ad_text-button">участвует в акции</span>
+                                        </button>
+                                    </small>
+                                    <a target="_blank" lang="ru" class="hyphenate card_description"
+                                        href="https://www.eraworld.ru/catalog/2999573">
+                                        Аварийный светильник светодиодный ЭРА SPO-1 с выводом
+                                        к БАП Б0062020 72Вт 6500K 3200Лм 595x595x19 призма серебро
+                                    </a>
+                                    <ul>
+                                        <li>Мощность, Вт: 72</li>
+                                        <li>Степень защиты: IP20</li>
+                                        <li>Размеры: 595x595x19</li>
+                                        <li>Индекс цветопередачи, Ra: 80 </li>
+                                        <li>Цветовая температура, K: 6500</li>
+                                    </ul>
+                                </div>
+
+                                <div class="sub_info"></div>
+
+                            </div>
+                        </div>
+
+                        <!-- Карточка 4: Маленькая карточка -->
+                        <div class="card card_box card_box_small card-square card_item cards-view" data-ra="80"
+                            data-color-temp="6500" data-body-color="Серебро" data-diffuser="Призма" data-model="SPO-1"
+                            data-size="595x595x19" data-power="72" data-degree-of-protection="IP20">
+
+                            <div class="card-body">
+                                <a target="_blank" itemscope itemtype="http://schema.org/ImageObject">
+                                    <img src="/images/cards_images/col4.png" loading="lazy" width="240" height="240"
+                                        alt="Аварийный светильник светодиодный ЭРА SPO-1 с выводом
+                                    к БАП Б0062020 72Вт 6500K 3200Лм 595x595x19 призма серебро" itemprop="contentUrl">
+                                    <meta itemprop="name" content="Аварийный светильник светодиодный ЭРА SPO-1 с выводом
+                                    к БАП Б0062020 72Вт 6500K 3200Лм 595x595x19 призма серебро">
+                                    <meta itemprop="width" content="240">
+                                    <meta itemprop="height" content="240">
+                                </a>
+                                <div class="card-heading">
+                                    <small class="info-line"> Б0062013
+                                        <button class="ad-small-button_promo" id="ad-button" type="submit">
+                                            <img src="/img/fire.svg" alt="icon">
+                                            <span class="ad_text-button">участвует в акции</span>
+                                        </button>
+                                    </small>
+                                    <a target="_blank" lang="ru" class="hyphenate small-card_description"
+                                        href="https://www.eraworld.ru/catalog/2999573">
+                                        Аварийный светильник светодиодный ЭРА SPO-1 с выводом
+                                        к БАП Б0062020 72Вт 6500K 3200Лм 595x595x19 призма серебро
+                                    </a>
+                                </div>
+                                <div class="right-info">
+                                    <div class="top_row">
+                                        <div class="boxed">
+                                            <a class="param-boxes" target="_blank" role="button">
+                                                <span class="fill"></span>
+                                                <span class="text">IP20</span>
+                                            </a>
+                                        </div>
+                                        <div class="boxed">
+                                            <a class="param-boxes" target="_blank" role="button">
+                                                <span class="fill"></span>
+                                                <span class="text">Вт: 72</span>
+                                            </a>
+                                        </div>
+
+                                        <div class="boxed">
+                                            <a class="param-boxes" target="_blank" role="button">
+                                                <span class="fill"></span>
+                                                <span class="text">Ra: 80</span>
+                                            </a>
+                                        </div>
+                                        <div class="boxed">
+                                            <a class="param-boxes" target="_blank" role="button">
+                                                <span class="fill"></span>
+                                                <span class="text">K: 6500</span>
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Карточка 5: Большая карточка (рядовая версия) -->
+                        <div class="card_box stretched-card card_box_row list-view" data-ra="90" data-color-temp="4000"
+                            data-body-color="Белый" data-diffuser="Матовый" data-model="SPL-5" data-size="595x595x8"
+                            data-power="24" data-degree-of-protection="IP40">
+                            <div class="media-left">
+                                <a itemscope itemtype="http://schema.org/ImageObject">
+                                    <img src="/images/cards_images/row6.png" loading="lazy" width="242" height="270"
+                                        alt="Аварийный светильник светодиодный ЭРА SPL-5 с выводом
+                                    к БАП Б0062020 24Вт 4000K 3200Лм 595x595x8 матовый белый" itemprop="contentUrl">
+                                    <meta itemprop="name" content="Аварийный светильник светодиодный ЭРА SPL-5 с выводом
+                                    к БАП Б0062020 24Вт 4000K 3200Лм 595x595x8 матовый белый">
+                                    <meta itemprop="width" content="242">
+                                    <meta itemprop="height" content="270">
+                                </a>
+
+                            </div>
+                            <div class="media-body">
+                                <div class="card-heading">
+                                    <small class="info-line"> Б0062013
+                                        <button class="ad-button_promo" id="ad-button" type="submit">
+                                            <img src="/img/fire.svg" alt="icon">
+                                            <span class="ad_text-button">участвует в акции</span>
+                                        </button>
+                                    </small>
+                                    <a target="_blank" lang="ru" class="hyphenate card_description"
+                                        href="https://www.eraworld.ru/catalog/2999573">
+                                        Аварийный светильник светодиодный ЭРА SPL-5 с выводом
+                                        к БАП Б0062020 24Вт 4000K 3200Лм 595x595x8 матовый белый
+                                    </a>
+                                    <ul>
+                                        <li>Мощность, Вт: 24</li>
+                                        <li>Степень защиты: IP40</li>
+                                        <li>Размеры: 595x595x8</li>
+                                        <li>Индекс цветопередачи, Ra: 90 </li>
+                                        <li>Цветовая температура, K: 4000</li>
+                                    </ul>
+                                </div>
+
+                                <div class="sub_info"></div>
+
+                            </div>
+                        </div>
+                        <!-- Карточка 5: Маленькая карточка -->
+                        <div class="card card_box stretched-card card_box_small card_item cards-view" data-ra="90"
+                            data-color-temp="4000" data-body-color="Белый" data-diffuser="Матовый" data-model="SPL-5"
+                            data-size="595x595x8" data-power="24" data-degree-of-protection="IP40">
+
+                            <div class="card-body">
+                                <a target="_blank" itemscope itemtype="http://schema.org/ImageObject">
+                                    <img src="/images/cards_images/col6.png" loading="lazy" width="240" height="240"
+                                        alt="Лампа светодиодная ЭРА RED LINE LED T8-10W-840-G13-600mm NTB G13 10 Вт неповоротный трубка стекло нейтральный белый свет"
+                                        itemprop="contentUrl">
+                                    <meta itemprop="name"
+                                        content="Лампа светодиодная ЭРА RED LINE LED T8-10W-840-G13-600mm NTB G13 10 Вт неповоротный трубка стекло нейтральный белый свет">
+                                    <meta itemprop="width" content="240">
+                                    <meta itemprop="height" content="240">
+                                </a>
+                                <div class="card-heading">
+                                    <small class="info-line"> Б0062013
+                                        <button class="ad-small-button_promo" id="ad-button" type="submit">
+                                            <img src="/img/fire.svg" alt="icon">
+                                            <span class="ad_text-button">участвует в акции</span>
+                                        </button>
+                                    </small>
+                                    <a target="_blank" lang="ru" class="hyphenate small-card_description"
+                                        href="https://www.eraworld.ru/catalog/2999573">
+                                        Аварийный светильник светодиодный ЭРА SPL-5 с выводом
+                                        к БАП Б0062020 24Вт 4000K 3200Лм 595x595x8 матовый белый
+                                    </a>
+                                </div>
+                                <div class="right-info">
+
+                                    <div class="top_row">
+
+                                        <div class="boxed">
+                                            <a class="param-boxes" target="_blank" role="button">
+                                                <span class="fill"></span>
+                                                <span class="text">IP40</span>
+                                            </a>
+                                        </div>
+
+                                        <div class="boxed">
+                                            <a class="param-boxes" target="_blank" role="button">
+                                                <span class="fill"></span>
+                                                <span class="text">Вт: 24</span>
+                                            </a>
+                                        </div>
+
+                                        <div class="boxed">
+                                            <a class="param-boxes" target="_blank" role="button">
+                                                <span class="fill"></span>
+                                                <span class="text">Ra: 90</span>
+                                            </a>
+                                        </div>
+
+                                        <div class="boxed">
+                                            <a class="param-boxes" target="_blank" role="button">
+                                                <span class="fill"></span>
+                                                <span class="text">K: 4000</span>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Карточка 6: Большая карточка (рядовая версия) -->
+                        <div class="card_box stretched-card card_box_row list-view" data-ra="80" data-color-temp="6500"
+                            data-body-color="Серебро" data-diffuser="Призма" data-model="LED-LP" data-size="115x45x28"
+                            data-power="18" data-degree-of-protection="IP20">
+                            <div class="media-left">
+                                <a target="_blank" itemscope itemtype="http://schema.org/ImageObject">
+                                    <img src="/images/cards_images/row6.png" alt=" Аварийный светильник светодиодный ЭРА LED-LP с выводом
+                                    к БАП Б0062020 18Вт 6500K 3200Лм 115x45x28 призма серебро" itemprop="contentUrl"
+                                        loading="lazy" width="242" height="270">
+                                    <meta itemprop="name" content=" Аварийный светильник светодиодный ЭРА LED-LP с выводом
+                                    к БАП Б0062020 18Вт 6500K 3200Лм 115x45x28 призма серебро">
+                                    <meta itemprop="width" content="242">
+                                    <meta itemprop="height" content="270">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <div class="card-heading">
+                                    <small class="info-line"> Б0062013
+                                        <button class="ad-button_promo" id="ad-button" type="submit">
+                                            <img src="/img/fire.svg" alt="icon">
+                                            <span class="ad_text-button">участвует в акции</span>
+                                        </button>
+                                    </small>
+                                    <a target="_blank" lang="ru" class="hyphenate card_description"
+                                        href="https://www.eraworld.ru/catalog/2999573">
+                                        Аварийный светильник светодиодный ЭРА LED-LP с выводом
+                                        к БАП Б0062020 18Вт 6500K 3200Лм 115x45x28 призма серебро
+                                    </a>
+                                    <ul>
+                                        <li>Мощность, Вт: 18</li>
+                                        <li>Степень защиты: IP20</li>
+                                        <li>Размеры: 115x45x28</li>
+                                        <li>Индекс цветопередачи, Ra: 80 </li>
+                                        <li>Цветовая температура, K: 6500</li>
+                                    </ul>
+                                </div>
+
+                                <div class="sub_info"></div>
+
+                            </div>
+                        </div>
+                        <!-- Карточка 6: Маленькая карточка -->
+                        <div class="card card_box card_box_small stretched-card card_item cards-view" data-ra="80"
+                            data-color-temp="6500" data-body-color="Серебро" data-diffuser="Призма" data-model="LED-LP"
+                            data-size="115x45x28" data-power="18" data-degree-of-protection="IP20">
+
+                            <div class="card-body">
+                                <a target="_blank" itemscope itemtype="http://schema.org/ImageObject">
+                                    <img src="/images/cards_images/col6.png" alt=" Аварийный светильник светодиодный ЭРА LED-LP с выводом
+                                    к БАП Б0062020 18Вт 6500K 3200Лм 115х45х28 призма серебро" itemprop="contentUrl"
+                                        loading="lazy" width="240" height="240">
+                                    <meta itemprop="name" content=" Аварийный светильник светодиодный ЭРА LED-LP с выводом
+                                    к БАП Б0062020 18Вт 6500K 3200Лм 115x45x28 призма серебро">
+                                    <meta itemprop="width" content="240">
+                                    <meta itemprop="height" content="240">
+                                </a>
+                                <div class="card-heading">
+                                    <small class="info-line"> Б0062013
+                                        <button class="ad-small-button_promo" id="ad-button" type="submit">
+                                            <img src="/img/fire.svg" alt="icon">
+                                            <span class="ad_text-button">участвует в акции</span>
+                                        </button>
+                                    </small>
+                                    <a target="_blank" lang="ru" class="hyphenate small-card_description"
+                                        href="https://www.eraworld.ru/catalog/2999573">
+                                        Аварийный светильник светодиодный ЭРА LED-LP с выводом
+                                        к БАП Б0062020 18Вт 6500K 3200Лм 115x45x28 призма серебро
+                                    </a>
+                                </div>
+                                <div class="right-info">
+                                    <div class="top_row">
+                                        <div class="boxed">
+                                            <a class="param-boxes" target="_blank" role="button">
+                                                <span class="fill"></span>
+                                                <span class="text">IP20</span>
+                                            </a>
+                                        </div>
+                                        <div class="boxed">
+                                            <a class="param-boxes" target="_blank" role="button">
+                                                <span class="fill"></span>
+                                                <span class="text">Вт: 18</span>
+                                            </a>
+                                        </div>
+
+                                        <div class="boxed">
+                                            <a class="param-boxes" target="_blank" role="button">
+                                                <span class="fill"></span>
+                                                <span class="text">Ra: 80</span>
+                                            </a>
+                                        </div>
+                                        <div class="boxed">
+                                            <a class="param-boxes" target="_blank" role="button">
+                                                <span class="fill"></span>
+                                                <span class="text">K: 6500</span>
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="pageContent"></div>
+                    <div class="pagination_container">
+                        <button class="pagination_button" data-page="prev">
+                            <picture>
+                                <source srcset="/img/backward-dark.svg">
+                                <img src="/img/backward.svg" alt="Назад">
+                            </picture>
+                        </button>
+
+                        <button class="pagination_button" data-page="1">1</button>
+                        <button class="pagination_button active" data-page="2">2</button>
+                        <button class="pagination_button" data-page="3">3</button>
+                        <button class="pagination_button" data-page="4">4</button>
+                        <button class="pagination_button" data-page="5">5</button>
+                        <button class="pagination_button" data-page="6">6</button>
+                        <span class="pagination_dots">…</span>
+
+                        <button class="pagination_button" data-page="next">
+                            <picture>
+                                <source srcset="/img/forward-dark.svg">
+                                <img src="/img/forward.svg" alt="Вперёд">
+                            </picture>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- container---------------------------------------------------------------------------------------------------------------------------------------------------------------------------    -->
+
+                <section class="filter_content content catalog_page ewbld-ctlg-_inc-ctgr">
+                    <div class="filter-panel">
+                        <div class="filter-resize-handle"></div>
+                        <button id="closeFilters" class="close-filters-btn" aria-label="Закрыть фильтры">
+                            <img src="/img/crossed-button.svg" alt="Закрыть">
+                        </button>
+                        <div class="left_filter">
+
+                            <form method="get" id="filterForm">
+                                <input type="hidden" name="sortByDescName" id="sortByDescName" value="false">
+                                <input type="hidden" name="page" id="cPage" value="1">
+                                <input type="hidden" name="sortTypeId" id="sortTypeId" value="">
+                                <input type="hidden" name="sortOrder" id="sortOrder" value="">
+
+                                <ul class="filter_group">
+                                    <h3>Индекс цветопередачи, Ra</h3>
+                                    <li class="filter-grid">
+                                        <div class="filter-grid-item">
+                                            <label>
+                                                <input type="checkbox" name="filter_1[1]" value="80">
+                                                <span> 80 </span>
+                                            </label>
+                                        </div>
+                                        <div class="filter-grid-item">
+                                            <label>
+                                                <input type="checkbox" name="filter_1[2]" value="90">
+                                                <span>
+                                                    <span> 90 </span>
+                                            </label>
+                                        </div>
+
+                                    </li>
+
+                                    <h3>Цветовая температура, K</h3>
+                                    <li class="filter-grid">
+                                        <div class="filter-grid-item">
+                                            <label>
+                                                <input type="checkbox" name="filter_2[1]" value="4000">
+                                                <span> 4000 </span>
+                                            </label>
+                                        </div>
+                                        <div class="filter-grid-item">
+                                            <label>
+                                                <input type="checkbox" name="filter_2[2]" value="6500">
+                                                <span> 6500 </span>
+                                            </label>
+                                        </div>
+                                    </li>
+
+                                    <h3>Цвет корпуса</h3>
+                                    <li class="filter-grid">
+                                        <div class="filter-grid-item">
+                                            <label>
+                                                <input type="checkbox" name="filter_3[1]" value="Белый">
+                                                <span> Белый </span>
+                                            </label>
+                                        </div>
+                                        <div class="filter-grid-item">
+                                            <label>
+                                                <input type="checkbox" name="filter_3[2]" value="Серебро">
+                                                <span> Серебро </span>
+                                            </label>
+                                        </div>
+                                    </li>
+
+                                    <h3>Тип рассеивателя</h3>
+                                    <li class="filter-grid">
+                                        <div class="filter-grid-item">
+                                            <label>
+                                                <input type="checkbox" name="filter_4[1]" value="Матовый">
+                                                <span> Матовый </span>
+                                            </label>
+                                        </div>
+                                        <div class="filter-grid-item">
+                                            <label>
+                                                <input type="checkbox" name="filter_4[2]" value="Призма">
+                                                <span> Призма </span>
+                                            </label>
+                                        </div>
+                                    </li>
+
+                                    <h3>Модель</h3>
+                                    <li class="filter-grid">
+                                        <div class="filter-grid-item">
+                                            <label>
+                                                <input type="checkbox" name="filter_5[1]" value="LED-LP">
+                                                <span> LED-LP </span>
+                                            </label>
+                                        </div>
+                                        <div class="filter-grid-item">
+                                            <label>
+                                                <input type="checkbox" name="filter_5[2]" value="SPL-5">
+                                                <span> SPL-5 </span>
+                                            </label>
+                                        </div>
+                                        <div class="filter-grid-item">
+                                            <label>
+                                                <input type="checkbox" name="filter_5[3]" value="SPO-1">
+                                                <span> SPO-1 </span>
+                                            </label>
+                                        </div>
+                                        <div class="filter-grid-item">
+                                            <label>
+                                                <input type="checkbox" name="filter_5[4]" value="SPO-5">
+                                                <span> SPO-5 </span>
+                                            </label>
+                                        </div>
+                                        <div class="filter-grid-item">
+                                            <label>
+                                                <input type="checkbox" name="filter_5[5]" value="SPO-6">
+                                                <span> SPO-6 </span>
+                                            </label>
+                                        </div>
+                                        <div class="filter-grid-item">
+                                            <label>
+                                                <input type="checkbox" name="filter_5[6]" value="SPO-7">
+                                                <span> SPO-7 </span>
+                                            </label>
+                                        </div>
+                                    </li>
+
+                                    <h3>Габариты, мм</h3>
+                                    <li class="filter-grid">
+                                        <div class="filter-grid-item">
+                                            <label>
+                                                <input type="checkbox" name="filter_6[1]" value="115x45x28">
+                                                <span> 115x45x28 </span>
+                                            </label>
+                                        </div>
+                                        <div class="filter-grid-item">
+                                            <label>
+                                                <input type="checkbox" name="filter_6[2]" value="595x595x8">
+                                                <span> 595x595x8 </span>
+                                            </label>
+                                        </div>
+                                        <div class="filter-grid-item">
+                                            <label>
+                                                <input type="checkbox" name="filter_6[3]" value="595x595x19">
+                                                <span> 595x595x19 </span>
+                                            </label>
+                                        </div>
+                                        <div class="filter-grid-item">
+                                            <label>
+                                                <input type="checkbox" name="filter_6[4]" value="595x595x25">
+                                                <span>595x595x25</span>
+                                            </label>
+                                        </div>
+                                        <div class="filter-grid-item">
+                                            <label>
+                                                <input type="checkbox" name="filter_6[5]" value="588x588x8">
+                                                <span>588x588x8</span>
+                                            </label>
+                                        </div>
+                                        <div class="filter-grid-item">
+                                            <label>
+                                                <input type="checkbox" name="filter_6[6]" value="1200x180x19">
+                                                <span>1200x180x19</span>
+                                            </label>
+                                        </div>
+                                    </li>
+
+                                    <h3>Потребляемая мощность, Вт </h3>
+                                    <li class="filter-grid">
+                                        <div class="filter-grid-item">
+                                            <label>
+                                                <input type="checkbox" name="filter_7[1]" value="18">
+                                                <span> 18 <span>
+                                            </label>
+                                        </div>
+                                        <div class="filter-grid-item">
+                                            <label>
+                                                <input type="checkbox" name="filter_7[2]" value="24">
+                                                <span> 24 </span>
+                                            </label>
+                                        </div>
+                                        <div class="filter-grid-item">
+                                            <label>
+                                                <input type="checkbox" name="filter_7[3]" value="36">
+                                                <span> 36 </span>
+                                            </label>
+                                        </div>
+                                        <div class="filter-grid-item">
+                                            <label>
+                                                <input type="checkbox" name="filter_7[4]" value="48">
+                                                <span> 48 </span>
+                                            </label>
+                                        </div>
+                                        <div class="filter-grid-item">
+                                            <label>
+                                                <input type="checkbox" name="filter_7[5]" value="50">
+                                                <span> 50 </span>
+                                            </label>
+                                        </div>
+                                        <div class="filter-grid-item">
+                                            <label>
+                                                <input type="checkbox" name="filter_7[6]" value="72">
+                                                <span> 72 </span>
+                                            </label>
+                                        </div>
+                                    </li>
+
+                                    <button class="btn reset-btn">
+                                        <span class="reset-description">
+                                            Сбросить
+                                          <img src="/img/reset-icon.svg" alt="Reset Icon" class="reset-icon" />
+                                        </span>
+                                      </button>
+
+                                </ul>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+        <footer>
+
+        </footer>
+        <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js" defer></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" defer></script>
+        <script src="js/Index.js" defer></script>
+        <script src="js/ModalCatalog.js" defer></script>
+        <script src="js/Glow.js" defer></script>
+        <script src="js/SwitchButton.js" defer></script>
+        <script src="js/Filters.js" defer></script>
+        <script src="js/PaginatioButton.js" defer></script>
+        <script src="js/GlobalSystemFilter.js" defer></script>
+        <script src="js/Hyphenator.js" defer></script>
+
+        <script>
+            Hyphenator.config({
+                defaultlanguage: 'ru',
+                minwordlength: 1
+            });
+            Hyphenator.run();
+        </script>
+
+
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v9.0"
+            nonce="hjqQL0W3">
+            </script>
+
+        <script type="text/babel">
+            ReactDOM.render(<CardModeToggle />, document.getElementById('root'));
+        </script>
+        <noscript>
+            <div><img src="https://mc.yandex.ru/watch/7925092" style="position:absolute; left:-9999px;" alt="" /></div>
+        </noscript>
+        <!-- Yandex.Metrika counter -->
+
+</body>
+
+</html>

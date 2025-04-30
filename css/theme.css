@@ -1,0 +1,95 @@
+:root {
+  --x: 0;
+  --y: 0;
+  --glow-strength: 1;
+  --filter-width: 300px;
+  --filter-offset: -320px;
+  --primary-color: #e30614;
+  --secondary-color: #89cdfd;
+  --success-color: #2ab27b;
+  --danger-color: #bf5329;
+  --warning-color: #cbb956;
+  --info-color: #8eb4cb;
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --text-color-logo:#000000dc;
+  --link-color: #505050;
+  --border-color: #d6d6d6;
+  --link-hover-color:#15746b;
+  --nav-barbg-color: #ffd16f;
+  --navbar-bg-color: #222;
+  --selector-label-color:#505050;
+  --navbar-inverse--bg-color: #646464d2;
+  --navbar-toggle-bg-color: #333;
+  --hover-border-color:#000000;
+  --transition-speed: 0.3s;
+  --article-num:#000000;
+  --prod-description:#1d1d1d;
+  --prod-list:#000000;
+  --catalog-button-color:#000000;
+  --bread-li-color:#000000;
+  --check-bg-color:  #F9FAFB;;
+  --check-border-color:  #9CA3AF;
+  --box-shadow-color: #b4b4b4de;
+  --borde-switch-btn: #bebebe;
+  --ad-button:#22C55E;
+  --param-bg: #F7F5FE;
+  --param-border: #ECE7FD;
+  --param-boxes-color: #000000;
+  --active-pagination-color: #000000;
+  --footer-modal-button-bg:#E5E7EB;
+  --modal-footer-text-button:#000000d7;
+  --hover-glint: rgba(0, 0, 0, 0.1); 
+  --change-theme-opt: #012b55;
+  --filter-shadow: rgba(71, 71, 71, 0.589);
+}
+
+ /* Тёмная тема */
+.dark-theme {
+  --x: 0;
+  --y: 0;
+  --glow-strength: 1;
+  --filter-width: 300px;
+  --filter-offset: -320px;
+  --primary-color: #e30614;
+  --secondary-color: #89cdfd;
+  --success-color: #2ab27b;
+  --danger-color: #bf5329;
+  --warning-color: #cbb956;
+  --info-color: #8eb4cb;
+  --bg-color: #01101f;
+  --text-color: #f7ca68de;
+  --text-color-logo:#fad765bd;
+  --link-color: #9e9a9a;
+  --border-color: #f7d3702f;
+  --link-hover-color: #77f1d3;
+  --filter-small-color:#cbb956;
+  --nav-barbg-color: #ffd16f;
+  --selector-label-color:#ffdb78;
+  --navbar-inverse--bg-color: #d3d3d3;
+  --navbar-toggle-bg-color: #080808;
+  --hover-border-color:#ffffff;
+  --transition-speed: 0.3s;
+  --article-num:#ff9d1c;
+  --prod-description:#f7ca68de;
+  --prod-list:#f7e268f5;
+  --catalog-button-color:#ff9d1c;;
+  --bread-li-color:#afafaf;
+  --check-bg-color: #011324;
+  --check-border-color:#f5b62dd7;
+  --box-shadow-color: #f39d1c94;
+  --borde-switch-btn: #ee961298;
+  --ad-button:#ff9925;
+  --param-bg: #2d3c4b;
+  --param-border: #ECE7FD;
+  --param-boxes-color: #f5b62dd3;
+  --active-pagination-color: #f5b62d93;
+  --footer-modal-button-bg:#001931;
+  --modal-footer-text-button:#f5b62dd7;
+  --hover-glint: rgba(255, 255, 255, 0.2);
+  --transition-speed: 0.3s;
+  --change-theme-opt: #f5b62dd3;
+  --filter-shadow: rgba(255, 196, 0, 0.329);
+}
+    
+  
